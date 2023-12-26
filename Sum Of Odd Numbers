@@ -1,0 +1,18 @@
+function sumOfOddNumbers (n) {
+
+    let i=0;
+    let oneStep = i + 2;
+    let numberSteps = oneStep*n;
+
+    while (i<numberSteps) {
+        i++;
+        if (i % 2 == !0) {
+            console.log (i);
+        }
+    }
+    let total = n*n;
+    console.log (`Sum: ${total}`);
+
+    
+
+} sumOfOddNumbers (5);
