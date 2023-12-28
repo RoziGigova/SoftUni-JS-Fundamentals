@@ -1,0 +1,41 @@
+function vacation (num, person,day) {
+
+    if (day == "Friday") {
+        switch (person) {
+        case "Students": priceOnePerson = 8.45; break;
+        case "Business": priceOnePerson = 10.90; break;
+        case "Regular": priceOnePerson = 15; break;
+        }
+    } else if (day == "Saturday") {
+        switch (person) {
+            case "Students": priceOnePerson = 9.80; break;
+            case "Business": priceOnePerson = 15.60; break;
+            case "Regular": priceOnePerson = 20; break;
+            }
+    } else if (day == "Sunday") {
+    switch (person) {
+        case "Students": priceOnePerson = 10.46; break;
+        case "Business": priceOnePerson = 16; break;
+        case "Regular": priceOnePerson = 22.50; break;
+        }
+    }
+  
+    let price = num*priceOnePerson;
+    switch (person) {
+        case "Students": 
+        if (num>=30) {
+        price = price*0.85;
+    }
+        case "Business":
+             if (num>=100) {
+        price = price-10*priceOnePerson;
+    } 
+        case "Regular": 
+        if (num>=10 && num <=20) {
+        price = price*0.95;
+    }
+}
+    
+    console.log (`Total price: ${price.toFixed(2)}`);
+}
+vacation (40,"Regular","Saturday");
