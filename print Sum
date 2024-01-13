@@ -1,0 +1,14 @@
+function printSum (numStart, numEnd) {
+
+    let nums = "";
+    let sum = 0;
+
+for (let i = numStart; i <=numEnd; i++) {
+    nums += i + " ";
+    sum = sum +i;
+}
+
+console.log (nums);
+console.log (`Sum: ${sum}`);
+
+} 
