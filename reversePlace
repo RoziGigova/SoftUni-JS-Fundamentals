@@ -1,0 +1,19 @@
+// Write a program, which receives an array of strings. 
+Your task is to reverse the array without creating a new array. Print the resulting elements on a single line, space-separated.
+
+function reversePlace (arr) 
+{
+    for (let i=0; i<=2; i++) {
+
+        let j = arr.length - 1 -i;
+
+        let temp = arr [i];
+        arr[i] = arr [j];
+        arr [j] = temp;
+    }
+    console.log (arr.join (' '));
+   
+}
+reversePlace (['a', 'b', 'c', 'd', 'e', 'f']);
+reversePlace (['abc', 'def', 'hig','klm', 'nop']);
+reversePlace (['33', '123', '0', 'dd']); 
