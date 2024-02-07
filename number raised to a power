@@ -4,11 +4,24 @@ function power (n, exponent) {
 
     let result = 1;
     for (let i=0; i < exponent; i ++) {
-        result *= n;
+    result *= n;
     }
-    console.log (result)
+console.log (result)
 
 }
+
+function recursivePower (n, exponent){
+if (exponent == 0) {
+    return 1;
+} else {
+    return n * recursivePower (n, exponent - 1);
+}
+}
+
+console.log (recursivePower (2,8));
+console.log (recursivePower (3,4));
+console.log (recursivePower (4,5));
+
 power (2,8);
 power (3,4);
 power (4,5);
