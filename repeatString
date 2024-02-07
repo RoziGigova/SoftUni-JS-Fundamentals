@@ -1,0 +1,13 @@
+// Write a function that receives a string and a repeat count n. The function should return a new string (the old one repeated n times).
+
+function repeat (str, num) {
+    let result = "";
+
+    for (let i=0; i < num; i++) {
+        result += str;
+    }
+    return result;
+
+}
+console.log (repeat ("abc", 3));
+console.log (repeat ("String", 2));
