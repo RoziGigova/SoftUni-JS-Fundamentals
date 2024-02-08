@@ -13,9 +13,129 @@ function simpleCalculator (a,b,operator) {
     } else if (operator == "divide") {
         console.log (a / b);
     }
-
 }
 simpleCalculator (5, 3, "add");
 simpleCalculator (7, 1, "subtract");
 simpleCalculator (5, 10, "multiply");
 simpleCalculator (21, 3, "divide");
+
+// 2-nd version
+
+function simpleCalculator (a,b,operator) {
+   switch (operator) {
+       case "add":
+            console.log(a + b);
+            break;
+       case "subtract":
+            console.log (a-b);
+            break;
+       case "multiply":
+            console.log (a * b);
+            break;
+        case "divide":
+            console.log (a / b);
+            break;
+        }
+   }
+
+simpleCalculator (5, 3, "add");
+simpleCalculator (7, 1, "subtract");
+simpleCalculator (5, 10, "multiply");
+simpleCalculator (21, 3, "divide");
+
+// 3-rd version
+
+function simpleCalculator (a,b,operator) {
+    let result;
+    switch (operator) {
+        case "add":
+             result = a + b;
+             break;
+        case "subtract":
+             result = a-b;
+             break;
+        case "multiply":
+             result = a * b;
+             break;
+         case "divide":
+             result = a / b;
+             break;
+         }
+         console.log (result);
+    }
+ 
+ simpleCalculator (5, 3, "add");
+ simpleCalculator (7, 1, "subtract");
+ simpleCalculator (5, 10, "multiply");
+ simpleCalculator (21, 3, "divide");
+
+// 4-th version
+
+function simpleCalculator (a,b,operator) {
+    let add = (a,b) => a + b;
+    let subtract = (a,b) => a - b;
+    let multiply = (a, b) => a * b;
+    let divide = (a,b) => a / b;
+
+    let result;
+
+    switch (operator) {
+        case "add":
+             result = add (a, b);
+             break;
+        case "subtract":
+             result = subtract (a, b);
+             break;
+        case "multiply":
+             result = multiply (a, b);
+             break;
+         case "divide":
+             result = divide (a, b);
+             break;
+         }
+         console.log (result);
+    }
+ 
+ simpleCalculator (5, 3, "add");
+ simpleCalculator (7, 1, "subtract");
+ simpleCalculator (5, 10, "multiply");
+ simpleCalculator (21, 3, "divide");
+
+5-th version
+
+ function simpleCalculator (a,b,operator) {
+    let add = (a,b) => a + b;
+    let subtract = (a,b) => a - b;
+    let multiply = (a, b) => a * b;
+    let divide = (a,b) => a / b;
+
+    let operations = [
+        add,
+        subtract,
+        multiply,
+        divide,
+    ];
+
+    let operation;
+
+    switch (operator) {
+        case "add":
+             operation = operations [0];
+             break;
+        case "subtract":
+             operation = operations [1];
+             break;
+        case "multiply":
+             operation = operations [2];
+             break;
+         case "divide":
+             operation = operations [3];
+             break;
+         }
+         console.log (operation (a,b));
+    }
+ 
+ simpleCalculator (5, 3, "add");
+ simpleCalculator (7, 1, "subtract");
+ simpleCalculator (5, 10, "multiply");
+ simpleCalculator (21, 3, "divide");
