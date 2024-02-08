@@ -139,3 +139,59 @@ function simpleCalculator (a,b,operator) {
  simpleCalculator (7, 1, "subtract");
  simpleCalculator (5, 10, "multiply");
  simpleCalculator (21, 3, "divide");
+
+6-th version
+
+function simpleCalculator (a,b,operator) {
+    let add = (a,b) => a + b;
+    let subtract = (a,b) => a - b;
+    let multiply = (a, b) => a * b;
+    let divide = (a,b) => a / b;
+
+    let operations = [
+        add,
+        subtract,
+        multiply,
+        divide
+    ];
+
+    let operationNames = [
+        "add",
+        "subtract",
+        "multiply",
+        "divide"
+    ];
+
+    let index;
+
+    for (let i=0; i<operationNames.length; i++) {
+        if (operationNames [i] == operator) {
+            index = i;
+        }
+    }
+        let operation = operations [index];
+         console.log (operation (a,b));
+    }
+ simpleCalculator (5, 3, "add");
+ simpleCalculator (7, 1, "subtract");
+ simpleCalculator (5, 10, "multiply");
+ simpleCalculator (21, 3, "divide");
+
+// 7-th version
+
+function simpleCalculator (a,b,operator) {
+
+    let operations = {
+        "add" : (a,b) => a + b,
+        "subtract" : (a,b) => a - b,
+        "multiply" : (a, b) => a * b,
+        "divide" : (a,b) => a / b,
+    };
+        let operation = operations [operator];
+        console.log (operation (a,b));
+    }
+ 
+ simpleCalculator (5, 3, "add");
+ simpleCalculator (7, 1, "subtract");
+ simpleCalculator (5, 10, "multiply");
+ simpleCalculator (21, 3, "divide");
