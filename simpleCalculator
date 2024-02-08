@@ -1,0 +1,21 @@
+// Write a function that receives three parameters – two numbers and an operator (string) – and calculates the result depending on the operator. 
+// Operator can be 'multiply', 'divide', 'add' or 'subtract'.
+
+
+function simpleCalculator (a,b,operator) {
+
+    if (operator == "add") {
+        console.log(a + b);
+    } else if (operator == "subtract") {
+        console.log (a-b);
+    } else if (operator == "multiply") {
+        console.log (a * b);
+    } else if (operator == "divide") {
+        console.log (a / b);
+    }
+
+}
+simpleCalculator (5, 3, "add");
+simpleCalculator (7, 1, "subtract");
+simpleCalculator (5, 10, "multiply");
+simpleCalculator (21, 3, "divide");
