@@ -1,0 +1,13 @@
+// Write a function that calculates and prints the sum of the first and the last elements in an array.The input comes as an array of string elements holding numbers.
+
+
+function sumFirstAndLast (arr) {
+
+    let firstNum = arr.shift ();
+    let lastNum = arr.pop ();
+
+    console.log (Number(firstNum) + Number(lastNum));
+
+}
+sumFirstAndLast (['5', '10']);
+sumFirstAndLast (['20', '30', '40']);
