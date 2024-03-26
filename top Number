@@ -1,0 +1,15 @@
+function findTopNumbers(input) {
+  const numbers = input.split(' ').map(Number);
+  const average = numbers.reduce((sum, num) => sum + num, 0) / numbers.length;
+
+  const topNumbers = numbers
+    .filter((num) => num > average)
+    .sort((a, b) => b - a)
+    .slice(0, 5);
+
+  if (topNumbers.length > 0) {
+    console.log(topNumbers.join(' '));
+  } else {
+    console.log('No');
+  }
+}
