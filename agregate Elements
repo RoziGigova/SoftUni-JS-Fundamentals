@@ -1,0 +1,21 @@
+function agregateElements (arr) {
+
+    let sum1 = 0;
+    let sum2 = 0;
+    let sum3 = '';
+    
+    for (let i=0; i<arr.length; i++) {
+        let num = arr [i];
+        sum1 += num;
+        sum2 += 1/num;
+        sum3 += num;
+
+    }
+    console.log (sum1);
+    console.log (sum2);
+    console.log (sum3);
+    
+
+}
+agregateElements ([1, 2, 3]);
+// agregateElements ([2, 4, 8, 16]);
